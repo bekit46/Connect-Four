@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Roboto';
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+
+[data-scroll-locked][data-scroll-locked] {
+  overflow: auto !important;
+  padding-right: 0 !important;
+  margin-right: 0 !important;
+}
+
+[data-scroll-locked] {
+  position: static !important;
+  overflow: auto !important;
+  padding-right: 0 !important;
+  margin-right: 0 !important;
+  width: auto !important;
+}
+
+body:has([role="dialog"]) {
+  padding-right: 0 !important;
+  overflow: auto !important;
+}
